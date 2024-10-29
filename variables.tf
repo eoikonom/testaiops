@@ -1,16 +1,16 @@
 variable "vsphere_user" {
   description = "vsphere user"
-  default     = "gymuser-c8enn1ds@techzone.ibm.local"
+  
 }
 
 variable "vsphere_password" {
   description = "vsphere password"
-  default     = "kPzeZtbR"
+  
 }
 
 variable "vsphere_server" {
   description = "vsphere server"
-  default     = "ocpgym-vc.techzone.ibm.local"
+ 
 }
 
 variable "datacenter" {
