@@ -82,13 +82,13 @@ variable "vm_domain" {
 variable "vm_dns_list" {
   description = "Nameserver of the virtual machine"
   type        = list(string)
-  default     = ["192.168.252.1"]
+
 }
 
 variable "vm_suffix_list" {
   description = "DNS search domains of the virtual machine"
   type        = list(string)
-  default     = ["gym.lan"]
+
 }
 
 variable "vm_gateway" {
