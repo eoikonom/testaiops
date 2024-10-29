@@ -15,37 +15,37 @@ variable "vsphere_server" {
 
 variable "datacenter" {
   description = "The name of the datacenter where the VM will be deployed"
-  default     = "IBMCloud"
+  
 }
 
 variable "datastore" {
   description = "The name of the datastore where the VM will be stored"
-  default     = "gym-664003157g-c8enn1ds-storage"
+ 
 }
 
 variable "resource_pool" {
   description = "The name of the resource pool for the VM"
-  default     = "/IBMCloud/host/ocp-gym/Resources/Cluster Resource Pool/Gym Member Resource Pool/gym-664003157g-c8enn1ds"
+  
 }
 
 variable "cluster" {
   description = "The name of the vsphere cluster for the VM"
-  default     = "ocp-gym"
+ 
 }
 
 variable "vm_name" {
   description = "Name of the virtual machine"
-  default     = "mytestvm1"
+ 
 }
 
 variable "network" {
   description = "Name of the virtual machine network"
-  default     = "gym-664003157g-c8enn1ds-segment"
+  
 }
 
 variable "template" {
   description = "Name of the virtual machine template"
-  default     = "rhel8-template"
+  
 }
 
 
@@ -69,8 +69,8 @@ variable "vm_disk_size" {
 
 
 variable "vm_ntp" {
-  description = "hostname of the virtual machine"
-  default     = "162.159.200.1"
+  description = "NTP of the virtual machine"
+
 }
 
 
@@ -93,23 +93,23 @@ variable "vm_suffix_list" {
 
 variable "vm_gateway" {
   description = "Gateway of the virtual machine"
-  default     = "192.168.252.1"
+
 }
 
 variable "vm_netmask" {
   description = "Netmask of the virtual machine"
-  default     = 24
+
 }
 
 
 variable "vm_ip" {
   description = "Static IP of the virtual machine"
-  default     = "192.168.252.81"
+
 }
 
 variable "vm_folder" {
   description = "Folder of the virtual machine"
-  default     = "/ocp-gym/gym-664003157g-c8enn1ds"
+
 }
 
 
