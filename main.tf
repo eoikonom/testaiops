@@ -56,10 +56,25 @@ resource "vsphere_virtual_machine" "vm" {
   clone {
     template_uuid = data.vsphere_virtual_machine.template.id
     customize {
-      linux_options {
-        host_name = var.vm_name
-        domain    = var.vm_domain
+
+      # Conditionally add windows_options block if os_type is "windows"
+      dynamic "windows_options" {
+        for_each = var.os_type == "windows" ? [1] : []
+        content {
+          computer_name  = var.vm_name
+          admin_password = "YourPassword123"
+        }
       }
+
+      # Conditionally add linux_options block if os_type is "linux"
+      dynamic "linux_options" {
+        for_each = var.os_type == "linux" ? [1] : []
+        content {
+          host_name = var.vm_name
+          domain    = var.vm_domain
+        }
+      }
+
       network_interface {
         ipv4_address = var.vm_ip
         ipv4_netmask = var.vm_netmask
