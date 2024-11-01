@@ -112,4 +112,7 @@ variable "vm_folder" {
 
 }
 
-
+variable "os_type" {
+  description = "Type of operating system (windows or linux)"
+  type        = string
+}
