@@ -62,7 +62,6 @@ resource "vsphere_virtual_machine" "vm" {
         for_each = var.os_type == "windows" ? [1] : []
         content {
           computer_name  = var.vm_name
-          admin_password = "YourPassword123"
         }
       }
 
